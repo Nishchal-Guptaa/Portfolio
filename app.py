@@ -1,6 +1,10 @@
 from flask import Flask, render_template, request, redirect, url_for
 import requests
 from pymongo import MongoClient
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 
@@ -15,10 +19,10 @@ def home():
 
 @app.route('/projects')
 def projects():
-    github_username = 'Nishchal-Guptaa'
+    github_username = os.getenv("github_username")
     url = f'https://api.github.com/users/{github_username}/repos'
     headers = {
-        'AUTHORIZATION':'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'
+        'AUTHORIZATION': os.getenv("AUTHORIZATION")
     }
     response = requests.get(url, headers=headers)
     projects = response.json()
