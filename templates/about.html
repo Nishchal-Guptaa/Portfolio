@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<style>
+    body {
+        background-color: #080c24;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+
+    .cont {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .about-box {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        border-radius: 10px;
+        width: 60%;
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        text-align: left;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 2rem;
+        text-transform: uppercase;
+        color: #0ff;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    ul li {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+</style>
+<body>
+    <div class="icon-bar">
+        <a href="/" class="facebook"><i class="fa fa-home" title='home'></i></a>
+        <a href="#" class="twitter"><i class="fa fa-user" title='about'></i></a>
+        <a href="/projects" class="google"><i class="fa fa-briefcase" title='projects'></i></a>
+        <a href="https://www.linkedin.com/in/nishchal-gupta-877946251/" class="linkedin" target="_blank"><i class="fa fa-linkedin" title='linkedin'></i></a>
+        <a href="/contact" class="youtube"><i class="fa fa-comments" title='contact'></i></a>
+    </div>
+    
+    <div class="cont">
+        <div class="about-box">
+            <h1>About Me</h1>
+            <p>Hello! I'm <strong>Nishchal Gupta</strong>, a passionate Python and Machine Learning enthusiast. I love building intelligent systems and working on data-driven projects.</p>
+            <p>Currently, I am working on various projects to enhance my skills in data science, AI, and web development.</p>
+            <p>My expertise includes:</p>
+            <ul>
+                <li>Python, Flask</li>
+                <li>Machine Learning</li>
+                <li>Data Analysis & Visualization</li>
+                <li>Web Scraping & Automation</li>
+            </ul>
+            <p>Feel free to explore my work and connect with me on LinkedIn.</p>
+            <div class="btns"><button class="btn" onclick="window.location.href='/projects'">Explore My Work</button></div>
+        </div>
+    </div>
+</body>
+</html>

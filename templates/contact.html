@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            background-color: #080c24;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .contain {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .contact-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px 40px 20px 20px;
+            border-radius: 10px;
+            width: 350px;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            text-align: left;
+            height: auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            text-transform: uppercase;
+            color: #0ff;
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+            line-height: 20px;
+        }
+
+        .contact-info a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 5px;
+            resize: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="icon-bar">
+        <a href="/" class="facebook"><i class="fa fa-home" title="Home"></i></a>
+        <a href="/about" class="twitter"><i class="fa fa-user" title="About"></i></a>
+        <a href="/projects" class="google"><i class="fa fa-briefcase" title="Projects"></i></a>
+        <a href="https://www.linkedin.com/in/nishchal-gupta-877946251/" class="linkedin" target="_blank"><i class="fa fa-linkedin" title="LinkedIn"></i></a>
+        <a href="/contact" class="youtube"><i class="fa fa-comments" title="Contact"></i></a>
+    </div>
+
+    <div class="contain">
+        <div class="contact-box">
+            <h1>Contact Me</h1>
+            <div class="contact-info">
+                <p><strong><span style='color: rgba(0, 255, 255, 0.5);'>Email:</span></strong> <a href="mailto:nishchal7535@gmail.com">nishchal7535@gmail.com</a></p>
+                <p><strong><span style='color: rgba(0, 255, 255, 0.5);'>Phone:</span></strong> +91 8802499328</p>
+                <p><strong><span style='color: rgba(0, 255, 255, 0.5);'>LinkedIn:</span></strong> <a href="https://www.linkedin.com/in/nishchal-gupta-877946251/" target="_blank">nishchal-gupta</a></p>
+            </div>
+            <form action="/submit" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>            
+        </div>
+    </div>
+
+</body>
+</html>

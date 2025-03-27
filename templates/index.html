@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="icon-bar">
+        <a href="/" class="facebook"><i class="fa fa-home" title='home'></i></a>
+        <a href="/about" class="twitter"><i class="fa fa-user" title='about'></i></a>
+        <a href="/projects" class="google"><i class="fa fa-briefcase" title='projects'></i></a>
+        <a href="https://www.linkedin.com/in/nishchal-gupta-877946251/" class="linkedin" target="_blank"><i class="fa fa-linkedin" title='linkedin'></i></a>
+        <a href="/contact" class="youtube"><i class="fa fa-comments" title='contact'></i></a>
+    </div>
+
+    <!-- Desktop Video-->
+    <video autoplay muted loop id="desktop-video" class="video-bg">
+        <source src="{{ url_for('static', filename='bg-desk.mp4') }}" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    
+    <!-- Mobile Video -->
+    <video autoplay muted loop id="mobile-video" class="video-bg">
+        <source src="{{ url_for('static', filename='bg.mp4') }}" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <div class="content">
+        <div class="box1">
+            <p>Hello 👋, I am</p>
+            <h2>Nishchal Gupta</h2>
+            <p>Python and Machine Learning Enthusiast</p>
+            <p style="font-size: 16px">Currently working on various projects to improve my skills</p>
+            <div class='btns'><button class="btn" onclick="window.location.href='/about'">Learn More</button><button class="btn" onclick="window.location.href='/projects'">Explore My Work</button></div>
+        </div>
+    </div>
+    
+
+    <script>
+        // Optional: Add JavaScript for mobile menu toggle if needed
+    </script>
+</body>
+</html>
+
+
+
+
+

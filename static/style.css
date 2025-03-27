@@ -1,0 +1,214 @@
+.icon-bar {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 4rem;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #c7c7c755;
+    margin-left: 10px;
+    z-index: 10;
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: #000;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.icon-bar a:hover {
+    color: rgba(0, 255, 255);
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Optional: Add an overlay for better text readability */
+
+
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Hide mobile video by default */
+#mobile-video {
+    display: none;
+}
+
+.content {
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;  /* Centers vertically */
+    position: fixed;  /* Keeps it centered even when scrolling */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    text-align: center;
+    font-size: 24px;
+}
+
+
+.box1 {
+    color: rgba(0, 255, 255);
+    -webkit-text-stroke: #fff;
+    -webkit-text-stroke-width: 0.2px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    display: inline-block;
+}
+
+.box1 p {
+    font-size: 25px;
+    line-height: normal;
+}
+
+.box1 h2 {
+    font-size: 80px;
+    margin-top: -30px;
+}
+
+.box2 {
+    border: 2px solid red;
+}
+.btns{
+    display: flex;
+    justify-content: space-between;
+    margin: 25px;
+}
+/* From Uiverse.io by gharsh11032000 */
+.btn {
+    position: relative;
+    width: 120px;
+    height: 40px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    padding: 12px;
+    gap: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: -4px;
+    top: -1px;
+    margin: auto;
+    width: 128px;
+    height: 48px;
+    border-radius: 10px;
+    background:  #40c9ff ;
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: #00dbde;
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+}
+
+.btn:hover::after {
+    filter: blur(30px);
+}
+
+.btn:hover::before {
+    transform: rotate(-180deg);
+}
+
+.btn:active::before {
+    scale: 0.7;
+}
+
+
+
+/* Mobile View: Change to Bottom Navbar */
+@media (max-width: 570px) {
+    .icon-bar {
+        top: auto;
+        bottom: 0;
+        width: 100%;
+        transform: none;
+        flex-direction: row;
+        justify-content: space-around;
+        /* Optional: Change background */
+        padding: 10px 0;
+        border-radius: 0;
+        margin-left: 0;
+    }
+
+    .icon-bar a {
+        flex: 1;
+        text-align: center;
+        padding: 0px;
+        font-size: 18px;
+        border-radius: 0;
+    }
+
+    .icon-bar a:hover {
+        background-color: transparent;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .box1 {
+        color: rgb(0, 229, 255);
+        background: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        display: inline-block;
+    }
+
+    .box1 p {
+        font-size: 25px;
+        line-height: normal;
+    }
+
+    .box2 {
+        border: 2px solid red;
+    }
+
+    /* Mobile View */
+    #desktop-video {
+        display: none;
+    }
+
+    #mobile-video {
+        display: block;
+    }
+}
